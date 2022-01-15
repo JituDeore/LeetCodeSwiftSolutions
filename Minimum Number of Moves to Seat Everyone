@@ -1,0 +1,12 @@
+ func minMovesToSeat(_ seats: [Int], _ students: [Int]) -> Int {
+        var _seats = seats
+        var _students = students
+        _seats.sort()
+        _students.sort()
+        
+        var numberOfMoves = 0
+        for i in 0..._seats.count - 1  {
+            numberOfMoves +=  abs(_students[i] - _seats[i])
+        }
+        return numberOfMoves
+    }
