@@ -1,0 +1,12 @@
+func containsDuplicate(_ nums: [Int]) -> Bool {
+        var _nums = nums
+        _nums.sort()
+        for (i,value) in _nums.enumerated() {
+            if _nums[i] == _nums[i+1] {
+                return true
+            }
+            return false
+        }
+        
+        return false
+    }
