@@ -1,0 +1,12 @@
+
+func numJewelsInStones(_ jewels: String, _ stones: String) -> Int {
+    var count = 0
+    for jewel in jewels {
+        for stone in stones {
+            if stone == jewel {
+                count += 1
+            }
+        }
+    }
+    return count
+}
