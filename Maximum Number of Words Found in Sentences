@@ -1,0 +1,12 @@
+
+func mostWordsFound(_ sentences: [String]) -> Int {
+    var count = 0
+    for words in sentences {
+        let stringArray = words.components(separatedBy: " ")
+        
+        if count < stringArray.count {
+            count = stringArray.count
+        }
+    }
+    return count
+}
