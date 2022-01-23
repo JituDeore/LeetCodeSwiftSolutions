@@ -1,0 +1,17 @@
+    func interpret(_ command: String) -> String {
+        
+        var resultString = ""
+        let charArray = Array(command)
+        
+        for (index,value) in charArray.enumerated() {
+            
+            if value == "G" {
+                resultString.append(value)
+            } else if value == "(" && charArray[index+1] == ")" {
+                resultString.append("o")
+            } else if value == "(" && charArray[index+1] != ")" {
+                resultString.append("al")
+            }
+        }
+        return resultString
+    }
