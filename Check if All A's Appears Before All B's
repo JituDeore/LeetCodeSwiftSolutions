@@ -1,0 +1,14 @@
+    func checkString(_ s: String) -> Bool {
+        
+        let charArray = Array(s)
+        
+        for i in 0...charArray.count - 1  {
+            if i == charArray.count - 1 {
+                return true
+            } else if charArray[i] == "b" && charArray[i+1] == "a" 
+            {
+                return false
+            }
+        }
+    return true
+    }
