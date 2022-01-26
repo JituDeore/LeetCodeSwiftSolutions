@@ -1,0 +1,15 @@
+func toLowerCase(_ s: String) -> String {
+        var resultString = ""
+        for char in s {
+            if char.isUppercase {
+                let later = char.unicodeScalars
+                let asciValue = later[later.startIndex].value + 32
+                let u = UnicodeScalar(asciValue)
+                let char = Character(u!)
+                resultString.append(char)
+        } else {
+            resultString.append(char)
+        }
+    }
+    return resultString
+    }
