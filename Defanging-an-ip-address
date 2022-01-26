@@ -1,0 +1,11 @@
+func defangIPaddr(_ address: String) -> String {
+        var resultString = ""
+        for char in address {
+            if char == "." {
+                resultString.append("[.]")
+            } else {
+                resultString.append(char)
+            }
+        }
+        return resultString
+    }
