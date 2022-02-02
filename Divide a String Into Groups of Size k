@@ -17,7 +17,7 @@ func divideString(_ s: String, _ k: Int, _ fill: Character) -> [String] {
             count = 0
         }
             
-        if finalStr.count == 3 {
+        if finalStr.count == k {
             results.append(finalStr)
             finalStr = ""
         }
