@@ -1,0 +1,26 @@
+func divideString(_ s: String, _ k: Int, _ fill: Character) -> [String] {
+        var _s = s
+        var count = 0
+        var finalStr = ""
+        var results = [String]()
+        
+        while (_s.count % k != 0) {
+            _s.append(fill)
+        }
+        
+        for char in _s {    
+         if count < k {
+            finalStr.append(char)
+            count += 1
+        } else {
+            finalStr.append(char)
+            count = 0
+        }
+            
+        if finalStr.count == 3 {
+            results.append(finalStr)
+            finalStr = ""
+        }
+    }
+    return results
+    }
