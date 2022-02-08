@@ -1,0 +1,18 @@
+func isAnagram(_ s: String, _ t: String) -> Bool {
+        var s1 = Array(s)
+        var s2 = Array(t)
+    
+        s1.sort()
+        s2.sort()
+    
+        if s1.count != s2.count {
+            return false
+        }
+    
+        for (index,_) in s1.enumerated() {
+            if s1[index] != s2[index] {
+                return false
+            }
+        }
+    return true
+    }
